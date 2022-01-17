@@ -29,4 +29,5 @@ def rastrear(codeguim):
 
     #Se der erro e o código não estiver obsoleto, vai informar que o código ainda não foi postado ou é inválido.
     except:
-        print('{} Objeto não localizado ou código inválido. Verifique o código e se ele foi postado e tente novamente!'.format(codeguim))
+        listaeventos2 = []
+        return listaeventos2

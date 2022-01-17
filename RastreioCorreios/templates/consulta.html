@@ -7,13 +7,21 @@
         <td width="150"><b>Data</b></td>
         <td width="250"><b>Descrição</b></td>
     </tr>
-{% for evento in listaeventos2 %}
+{% if listaeventos2 != [] %}
+    {% for evento in listaeventos2 %}
 <table width="500" border="1px" >
     <tr>
-    <td width="150">{{ evento['dtHrCriado'] }}</td>
-    <td width="250">{{ evento['descricao'] }}</td>
-  </tr>
+        <td width="150">{{ evento['dtHrCriado'] }}</td>
+        <td width="250">{{ evento['descricao'] }}</td>
+    </tr>
+    {% endfor %}
 </table>
-{% endfor %}
+{% else %}
+    <table width="500" border="1px" >
+    <tr>
+    <td width="150"><b>ERRO!</b></td>
+    <td width="250">Verifique se o código está correto ou se o objeto já foi postado!</td></tr>
+    </table>
+{% endif %}
 <br>
 <a href="/">Retornar a página inicial</a>
