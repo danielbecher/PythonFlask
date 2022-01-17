@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<h1>Rastreamento de encomenda dos Correios</h1>
+<h2>Dados da encomenda: {{codeguim}}</h2>
+
+<table width="500" border="1px"bgcolor="#999999" >
+    <tr>
+        <td width="150"><b>Data</b></td>
+        <td width="250"><b>Descrição</b></td>
+    </tr>
+{% for evento in listaeventos2 %}
+<table width="500" border="1px" >
+    <tr>
+    <td width="150">{{ evento['dtHrCriado'] }}</td>
+    <td width="250">{{ evento['descricao'] }}</td>
+  </tr>
+</table>
+{% endfor %}
