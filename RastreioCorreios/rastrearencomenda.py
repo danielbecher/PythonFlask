@@ -7,7 +7,7 @@ def rastrear(codeguim):
     listaeventos2 = []
     i = 0
     try:
-        while i < len(resp_consulta['objetos'][0]['eventos'][0]):
+        while i < len(resp_consulta['objetos'][0]['eventos']):
             listaeventos.append(resp_consulta['objetos'][0]['eventos'][i])
             i += 1
         #print(listaeventos)
