@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<title>Correios ToolKit</title>
+<h1>Informações sobre o CEP:</h1>
+<h2>{{cep}}</h2>
+
+<table width="500" border="1px"bgcolor="#999999" >
+    <tr>
+        <td width="150"><b>Tipo</b></td>
+        <td width="250"><b>Informação</b></td>
+    </tr>
+{% if dadoscep != [] %}
+    {% for k,v in dadoscep.items() %}
+<table width="500" border="1px" >
+    <tr>
+        <td width="150">{{ k.upper() }}</td>
+        <td width="250">{{ v }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+    <table width="500" border="1px" >
+    <tr>
+    <td width="150"><b>ERRO!</b></td>
+    <td width="250">Verifique se o código está correto ou se o objeto já foi postado!</td></tr>
+    </table>
+{% endif %}
+<br>
+<a href="/">Retornar a página inicial</a>
