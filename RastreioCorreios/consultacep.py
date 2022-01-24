@@ -1,5 +1,4 @@
 #ConsultaCEP
-
 #importa as bibliotecas
 import requests
 

@@ -1,8 +1,8 @@
 #Importa as bibliotecas e funções separadas necessárias
 from flask import Flask, render_template, request
+#Importa as outras bibliotecas
 from rastrearencomenda import rastrear
 from consultacep import consultarCep
-
 
 #Cria o objeto app
 app = Flask(__name__)
@@ -37,4 +37,7 @@ def cepConsulta():
     return render_template('cep-consulta.html',cep=cep, dadoscep=consultarCep(cep))
 
 #Debug=True eu usei para que a cada salvamento do código, ele reiniciasse o app sem precisar dar reload.
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
+
+#Heroku
